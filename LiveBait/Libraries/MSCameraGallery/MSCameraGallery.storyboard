@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera Gallery-->
+        <scene sceneID="1C8-fF-SXH">
+            <objects>
+                <viewController storyboardIdentifier="MSCameraGallery" id="fRv-UK-ELO" customClass="MSCameraGallery" customModule="Drinks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pzk-2k-LaD"/>
+                        <viewControllerLayoutGuide type="bottom" id="WLw-Wd-J0e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fTC-iB-mfk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Glf-pa-gPl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                                <color key="backgroundColor" red="0.25490196079999999" green="0.90588235289999997" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="CYs-MG-8H1"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="df2-sz-ZqO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="378"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zb9-ph-2M5">
+                                <rect key="frame" x="11" y="20.5" width="59" height="59"/>
+                                <state key="normal" image="Cancel"/>
+                                <connections>
+                                    <action selector="actionBtnCancelPressed:" destination="fRv-UK-ELO" eventType="touchUpInside" id="h0j-lV-MFb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGs-08-3fH">
+                                <rect key="frame" x="305" y="20.5" width="59" height="59"/>
+                                <state key="normal" image="Done"/>
+                                <connections>
+                                    <action selector="actionBtnDonePressed:" destination="fRv-UK-ELO" eventType="touchUpInside" id="1ma-IL-Vjg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BvU-Ij-UvW">
+                                <rect key="frame" x="176.5" y="366.5" width="22" height="22"/>
+                                <state key="normal" image="Camera"/>
+                                <state key="selected" image="Retake"/>
+                                <connections>
+                                    <action selector="actionBtnCapture:" destination="fRv-UK-ELO" eventType="touchUpInside" id="1Ja-Z1-JS7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Et-2h-byJ">
+                                <rect key="frame" x="48.5" y="348.5" width="59" height="59"/>
+                                <state key="normal" image="ChangeCamera"/>
+                                <connections>
+                                    <action selector="actionBtnToggle:" destination="fRv-UK-ELO" eventType="touchUpInside" id="lsD-En-B5u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3R-EL-Zjb">
+                                <rect key="frame" x="267.5" y="348.5" width="59" height="59"/>
+                                <state key="normal" image="FlashOff"/>
+                                <connections>
+                                    <action selector="actionBtnFlash:" destination="fRv-UK-ELO" eventType="touchUpInside" id="1uA-3x-bhG"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YXQ-sQ-yfS">
+                                <rect key="frame" x="7.5" y="394" width="359" height="273"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yTp-ts-2Gd">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="df2-sz-ZqO" firstAttribute="centerX" secondItem="fTC-iB-mfk" secondAttribute="centerX" id="23y-1R-vOd"/>
+                            <constraint firstItem="df2-sz-ZqO" firstAttribute="centerX" secondItem="7Et-2h-byJ" secondAttribute="centerX" multiplier="600:250" id="2Fx-LG-3z8"/>
+                            <constraint firstItem="df2-sz-ZqO" firstAttribute="top" secondItem="Glf-pa-gPl" secondAttribute="bottom" id="3Ya-jb-geL"/>
+                            <constraint firstAttribute="centerX" secondItem="zb9-ph-2M5" secondAttribute="centerX" multiplier="600:130" id="44k-om-juS"/>
+                            <constraint firstItem="Glf-pa-gPl" firstAttribute="width" secondItem="fTC-iB-mfk" secondAttribute="width" id="48Y-OD-CEZ"/>
+                            <constraint firstItem="Glf-pa-gPl" firstAttribute="top" secondItem="fTC-iB-mfk" secondAttribute="top" id="C9z-ot-Hcq"/>
+                            <constraint firstItem="df2-sz-ZqO" firstAttribute="centerX" secondItem="t3R-EL-Zjb" secondAttribute="centerX" multiplier="600:950" id="FAm-gP-AaM"/>
+                            <constraint firstItem="t3R-EL-Zjb" firstAttribute="centerY" secondItem="BvU-Ij-UvW" secondAttribute="centerY" id="Kea-ui-7Vj"/>
+                            <constraint firstAttribute="height" secondItem="df2-sz-ZqO" secondAttribute="height" multiplier="600:340" id="Ofy-ZK-kAe"/>
+                            <constraint firstItem="BvU-Ij-UvW" firstAttribute="bottom" secondItem="YXQ-sQ-yfS" secondAttribute="top" constant="-5" id="Ry4-E2-dqp"/>
+                            <constraint firstItem="BvU-Ij-UvW" firstAttribute="centerX" secondItem="df2-sz-ZqO" secondAttribute="centerX" id="WOR-xR-szm"/>
+                            <constraint firstAttribute="centerY" secondItem="zb9-ph-2M5" secondAttribute="centerY" multiplier="600:90" id="Z0m-h3-TZ0"/>
+                            <constraint firstItem="YXQ-sQ-yfS" firstAttribute="centerX" secondItem="fTC-iB-mfk" secondAttribute="centerX" id="cM3-ad-jnv"/>
+                            <constraint firstItem="Glf-pa-gPl" firstAttribute="centerX" secondItem="fTC-iB-mfk" secondAttribute="centerX" id="fXN-nT-UgM"/>
+                            <constraint firstAttribute="centerX" secondItem="NGs-08-3fH" secondAttribute="centerX" multiplier="600:1070" id="fgP-vW-6Vt"/>
+                            <constraint firstItem="WLw-Wd-J0e" firstAttribute="top" secondItem="YXQ-sQ-yfS" secondAttribute="bottom" id="gEa-u0-x1u"/>
+                            <constraint firstItem="7Et-2h-byJ" firstAttribute="centerY" secondItem="BvU-Ij-UvW" secondAttribute="centerY" id="hEd-rq-cYF"/>
+                            <constraint firstItem="NGs-08-3fH" firstAttribute="centerY" secondItem="zb9-ph-2M5" secondAttribute="centerY" id="hd1-Iz-luF"/>
+                            <constraint firstAttribute="width" secondItem="YXQ-sQ-yfS" secondAttribute="width" constant="16" id="jmP-JQ-BLx"/>
+                            <constraint firstItem="BvU-Ij-UvW" firstAttribute="centerY" secondItem="df2-sz-ZqO" secondAttribute="bottom" id="obb-K6-0T0"/>
+                            <constraint firstItem="df2-sz-ZqO" firstAttribute="width" secondItem="fTC-iB-mfk" secondAttribute="width" id="tIF-HL-yk5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnCapture" destination="BvU-Ij-UvW" id="jlw-3S-AaQ"/>
+                        <outlet property="btnChangeCamera" destination="7Et-2h-byJ" id="irp-82-HSK"/>
+                        <outlet property="btnFlash" destination="t3R-EL-Zjb" id="FaE-pM-SPN"/>
+                        <outlet property="collectionViewFlowLayout" destination="yTp-ts-2Gd" id="G0l-nr-1iW"/>
+                        <outlet property="collectionViewImages" destination="YXQ-sQ-yfS" id="kn2-tk-vqA"/>
+                        <outlet property="viewContainer" destination="df2-sz-ZqO" id="tal-MV-cVW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1WL-Z2-2q7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-620" y="6"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Camera" width="22" height="18"/>
+        <image name="Cancel" width="59" height="59"/>
+        <image name="ChangeCamera" width="59" height="59"/>
+        <image name="Done" width="59" height="59"/>
+        <image name="FlashOff" width="59" height="59"/>
+        <image name="Retake" width="81" height="81"/>
+    </resources>
+</document>

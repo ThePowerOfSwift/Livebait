@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNovaSemibold.otf">
+            <string>ProximaNova-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="ESa-kc-v1Z" customClass="NotificationView" customModule="LiveBait" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbB-2u-wlg">
+                    <rect key="frame" x="171" y="8.5" width="33.5" height="19.5"/>
+                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call Duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kam-B3-x5S">
+                    <rect key="frame" x="138" y="3" width="99" height="21"/>
+                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChC-ej-qAd">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <connections>
+                        <action selector="actionBtnShowCallerView:" destination="ESa-kc-v1Z" eventType="touchUpInside" id="OEV-t9-IdB"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.94127291440000005" green="0.1365132332" blue="0.041696257889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ChC-ej-qAd" firstAttribute="width" secondItem="ESa-kc-v1Z" secondAttribute="width" id="3KO-ls-7KC"/>
+                <constraint firstItem="JbB-2u-wlg" firstAttribute="centerX" secondItem="jOA-sj-bFw" secondAttribute="centerX" id="8lU-OB-PZv"/>
+                <constraint firstItem="Kam-B3-x5S" firstAttribute="top" secondItem="jOA-sj-bFw" secondAttribute="top" constant="3" id="9gG-X3-Srx"/>
+                <constraint firstItem="JbB-2u-wlg" firstAttribute="centerY" secondItem="jOA-sj-bFw" secondAttribute="centerY" constant="-4" id="g23-LD-liX"/>
+                <constraint firstItem="ChC-ej-qAd" firstAttribute="centerY" secondItem="jOA-sj-bFw" secondAttribute="centerY" id="hVX-UA-r6z"/>
+                <constraint firstItem="ChC-ej-qAd" firstAttribute="height" secondItem="ESa-kc-v1Z" secondAttribute="height" id="iaz-8T-aua"/>
+                <constraint firstItem="ChC-ej-qAd" firstAttribute="centerX" secondItem="jOA-sj-bFw" secondAttribute="centerX" id="tVr-3P-XX2"/>
+                <constraint firstItem="Kam-B3-x5S" firstAttribute="centerX" secondItem="jOA-sj-bFw" secondAttribute="centerX" id="teY-PZ-IAf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="jOA-sj-bFw"/>
+            <connections>
+                <outlet property="lblTimer" destination="JbB-2u-wlg" id="zaO-fS-Ml3"/>
+            </connections>
+            <point key="canvasLocation" x="-505" y="-350"/>
+        </view>
+    </objects>
+</document>

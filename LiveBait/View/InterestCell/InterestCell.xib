@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="89" id="KGk-i7-Jjw" customClass="InterestCell" customModule="DTF" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csa-X4-d7h">
+                        <rect key="frame" x="23" y="35" width="227" height="19"/>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="eh5-AO-ug2">
+                        <rect key="frame" x="282" y="34" width="21" height="20"/>
+                    </imageView>
+                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXp-mc-vaI">
+                        <rect key="frame" x="0.0" y="88" width="320" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="wnj-dT-QTP"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUG-6g-V04">
+                        <rect key="frame" x="282" y="33" width="21" height="22"/>
+                        <state key="normal" image="UnSelected"/>
+                        <state key="selected" image="Selected"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WUG-6g-V04" firstAttribute="centerY" secondItem="eh5-AO-ug2" secondAttribute="centerY" id="3Kf-wV-Xcr"/>
+                    <constraint firstAttribute="trailing" secondItem="eh5-AO-ug2" secondAttribute="trailing" constant="17" id="EbC-Ct-EYD"/>
+                    <constraint firstItem="iXp-mc-vaI" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="I2y-q4-ZlE"/>
+                    <constraint firstAttribute="trailing" secondItem="Csa-X4-d7h" secondAttribute="trailing" constant="70" id="Mdk-Nk-2SO"/>
+                    <constraint firstItem="Csa-X4-d7h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="23" id="Nue-MH-LIf"/>
+                    <constraint firstItem="eh5-AO-ug2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="SBx-cY-BmU"/>
+                    <constraint firstAttribute="bottom" secondItem="iXp-mc-vaI" secondAttribute="bottom" id="e0j-7K-5v8"/>
+                    <constraint firstItem="Csa-X4-d7h" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="u0Y-5o-dOg"/>
+                    <constraint firstItem="iXp-mc-vaI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="ubJ-RN-MyC"/>
+                    <constraint firstItem="WUG-6g-V04" firstAttribute="centerX" secondItem="eh5-AO-ug2" secondAttribute="centerX" id="yjT-Yy-JOB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnSelected" destination="WUG-6g-V04" id="aIw-7O-WkJ"/>
+                <outlet property="lblInterest" destination="Csa-X4-d7h" id="hMO-7Z-HCK"/>
+            </connections>
+            <point key="canvasLocation" x="-578" y="-73"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Selected" width="21" height="20"/>
+        <image name="UnSelected" width="21" height="20"/>
+    </resources>
+</document>

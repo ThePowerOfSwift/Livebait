@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNovaRegular.otf">
+            <string>ProximaNova-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="UserGridCell" customModule="LiveBait" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="226" height="227"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="226" height="227"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserPH" translatesAutoresizingMaskIntoConstraints="NO" id="ZBy-eO-HKA">
+                        <rect key="frame" x="0.0" y="0.0" width="226" height="227"/>
+                    </imageView>
+                    <view clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Trs-3c-iEX">
+                        <rect key="frame" x="0.0" y="166.5" width="226" height="60.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maninderjit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48P-8i-DTA">
+                        <rect key="frame" x="20" y="173.5" width="79.5" height="19"/>
+                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sN2-a4-CU1">
+                        <rect key="frame" x="105.5" y="174.5" width="17" height="17.5"/>
+                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Distance" translatesAutoresizingMaskIntoConstraints="NO" id="sQ3-8X-Sdg">
+                        <rect key="frame" x="20" y="198.5" width="20" height="20"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Miles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWO-x9-gAN">
+                        <rect key="frame" x="50" y="201" width="45" height="16.5"/>
+                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="ZBy-eO-HKA" secondAttribute="top" id="532-WP-5gQ"/>
+                <constraint firstItem="Trs-3c-iEX" firstAttribute="width" secondItem="ZBy-eO-HKA" secondAttribute="width" id="7he-cy-HET"/>
+                <constraint firstItem="48P-8i-DTA" firstAttribute="top" secondItem="Trs-3c-iEX" secondAttribute="top" constant="7" id="8AF-91-x0n"/>
+                <constraint firstItem="Trs-3c-iEX" firstAttribute="width" relation="greaterThanOrEqual" secondItem="48P-8i-DTA" secondAttribute="width" multiplier="600:450" id="9v8-nZ-Hdr"/>
+                <constraint firstItem="ZBy-eO-HKA" firstAttribute="height" secondItem="Trs-3c-iEX" secondAttribute="height" multiplier="600:160" id="Kcb-Jl-nFn"/>
+                <constraint firstItem="aWO-x9-gAN" firstAttribute="centerY" secondItem="sQ3-8X-Sdg" secondAttribute="centerY" id="KwD-Kk-OMh"/>
+                <constraint firstItem="Trs-3c-iEX" firstAttribute="bottom" secondItem="ZBy-eO-HKA" secondAttribute="bottom" id="OyM-p2-012"/>
+                <constraint firstItem="ZBy-eO-HKA" firstAttribute="width" secondItem="ZTg-uK-7eu" secondAttribute="width" id="Tq4-l6-5wU"/>
+                <constraint firstItem="Trs-3c-iEX" firstAttribute="centerX" secondItem="ZBy-eO-HKA" secondAttribute="centerX" id="Yi1-Y0-I9t"/>
+                <constraint firstItem="sN2-a4-CU1" firstAttribute="centerY" secondItem="48P-8i-DTA" secondAttribute="centerY" id="cQl-At-mmB"/>
+                <constraint firstItem="ZBy-eO-HKA" firstAttribute="height" secondItem="ZTg-uK-7eu" secondAttribute="height" id="d8g-y5-1Vr"/>
+                <constraint firstItem="sQ3-8X-Sdg" firstAttribute="leading" secondItem="48P-8i-DTA" secondAttribute="leading" id="kRD-xK-IVX"/>
+                <constraint firstItem="sQ3-8X-Sdg" firstAttribute="top" secondItem="48P-8i-DTA" secondAttribute="bottom" constant="6" id="nHH-0t-pA7"/>
+                <constraint firstItem="sN2-a4-CU1" firstAttribute="leading" secondItem="48P-8i-DTA" secondAttribute="trailing" constant="6" id="nro-Ok-jyo"/>
+                <constraint firstItem="ZBy-eO-HKA" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="sXN-iM-sgc"/>
+                <constraint firstItem="aWO-x9-gAN" firstAttribute="leading" secondItem="sQ3-8X-Sdg" secondAttribute="trailing" constant="10" id="voH-Fg-vV5"/>
+                <constraint firstItem="Trs-3c-iEX" firstAttribute="leading" secondItem="48P-8i-DTA" secondAttribute="leading" constant="-20" id="wUD-bV-Lum"/>
+                <constraint firstItem="Trs-3c-iEX" firstAttribute="width" secondItem="ZTg-uK-7eu" secondAttribute="width" id="yxs-BN-FBS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="226" height="227"/>
+            <connections>
+                <outlet property="imgViewGrid" destination="ZBy-eO-HKA" id="O3r-Y5-fAg"/>
+                <outlet property="lblAge" destination="sN2-a4-CU1" id="fX0-7c-ehX"/>
+                <outlet property="lblDistance" destination="aWO-x9-gAN" id="hE1-H0-77l"/>
+                <outlet property="lblName" destination="48P-8i-DTA" id="Z95-zu-pwh"/>
+            </connections>
+            <point key="canvasLocation" x="3" y="9"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Distance" width="20" height="20"/>
+        <image name="UserPH" width="84" height="84"/>
+    </resources>
+</document>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CardView" customModule="DTF" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Developer" translatesAutoresizingMaskIntoConstraints="NO" id="8dX-hZ-mvV">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maninderjit SIngh" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wte-Tq-yhg">
+                    <rect key="frame" x="50" y="502" width="313" height="19"/>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Online" translatesAutoresizingMaskIntoConstraints="NO" id="DNL-hJ-Jup">
+                    <rect key="frame" x="22" y="504.5" width="13" height="13"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8dX-hZ-mvV" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="6oE-vJ-Zhz"/>
+                <constraint firstItem="8dX-hZ-mvV" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="DRP-8P-9AP"/>
+                <constraint firstItem="8dX-hZ-mvV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Fqt-qJ-L7u"/>
+                <constraint firstItem="Wte-Tq-yhg" firstAttribute="leading" secondItem="DNL-hJ-Jup" secondAttribute="trailing" constant="15" id="HP7-CM-8CB"/>
+                <constraint firstItem="DNL-hJ-Jup" firstAttribute="centerY" secondItem="Wte-Tq-yhg" secondAttribute="centerY" id="QZT-Vd-bXG"/>
+                <constraint firstItem="8dX-hZ-mvV" firstAttribute="centerY" secondItem="Wte-Tq-yhg" secondAttribute="centerY" multiplier="600:920" id="Uco-EG-vYf"/>
+                <constraint firstItem="8dX-hZ-mvV" firstAttribute="width" secondItem="Wte-Tq-yhg" secondAttribute="width" multiplier="600:500" id="dX8-08-9jN"/>
+                <constraint firstItem="Wte-Tq-yhg" firstAttribute="leading" secondItem="8dX-hZ-mvV" secondAttribute="leading" constant="50" id="hiR-05-YZI"/>
+                <constraint firstItem="8dX-hZ-mvV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="yob-xe-Cpv"/>
+            </constraints>
+            <connections>
+                <outlet property="imgViewOnline" destination="DNL-hJ-Jup" id="Q8F-aN-Wvt"/>
+                <outlet property="imgViewUser" destination="8dX-hZ-mvV" id="Sm3-2g-t4a"/>
+                <outlet property="lblUserName" destination="Wte-Tq-yhg" id="jwq-5e-7xg"/>
+            </connections>
+            <point key="canvasLocation" x="-287" y="57"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Developer" width="231" height="307"/>
+        <image name="Online" width="13" height="13"/>
+    </resources>
+</document>

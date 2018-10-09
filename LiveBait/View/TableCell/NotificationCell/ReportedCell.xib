@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNovaRegular.otf">
+            <string>ProximaNova-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="101" id="0CV-nW-r3c" customClass="ReportedCell" customModule="LiveBait" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="353" height="101"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0CV-nW-r3c" id="Tmu-L7-6Am">
+                <rect key="frame" x="0.0" y="0.0" width="353" height="100.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Developer" translatesAutoresizingMaskIntoConstraints="NO" id="UKq-tb-k4H">
+                        <rect key="frame" x="19" y="26" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="FQP-DI-FpO"/>
+                            <constraint firstAttribute="width" constant="50" id="N7c-fO-h04"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xc6-JY-Ahm">
+                        <rect key="frame" x="293" y="26" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="n70-io-8fy"/>
+                            <constraint firstAttribute="width" constant="50" id="qpR-Qu-gLY"/>
+                        </constraints>
+                        <state key="normal" image="NotificationReport"/>
+                        <connections>
+                            <action selector="actionBtnSaveContact:" destination="0CV-nW-r3c" eventType="touchUpInside" id="UWp-2W-toY"/>
+                        </connections>
+                    </button>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:30 AM " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9c-Hv-akJ">
+                        <rect key="frame" x="286" y="10" width="52" height="16"/>
+                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mohit67 shared location with you." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lC-5S-6ft">
+                        <rect key="frame" x="84" y="33.5" width="189" height="35"/>
+                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ro1-do-Dw7">
+                        <rect key="frame" x="0.0" y="100.5" width="353" height="0.5"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="SrO-NF-lxd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Xc6-JY-Ahm" firstAttribute="centerY" secondItem="Tmu-L7-6Am" secondAttribute="centerY" id="31U-zN-ucg"/>
+                    <constraint firstItem="ro1-do-Dw7" firstAttribute="bottom" secondItem="Tmu-L7-6Am" secondAttribute="bottom" id="B03-gI-aJN"/>
+                    <constraint firstAttribute="trailing" secondItem="u9c-Hv-akJ" secondAttribute="trailing" constant="15" id="BVm-4v-SyL"/>
+                    <constraint firstItem="u9c-Hv-akJ" firstAttribute="top" secondItem="Tmu-L7-6Am" secondAttribute="top" constant="10" id="Buf-o3-YaK"/>
+                    <constraint firstAttribute="centerX" secondItem="UKq-tb-k4H" secondAttribute="centerX" multiplier="600:150" id="FR8-QP-zxa"/>
+                    <constraint firstItem="ro1-do-Dw7" firstAttribute="centerX" secondItem="Tmu-L7-6Am" secondAttribute="centerX" id="ONw-fn-xRT"/>
+                    <constraint firstItem="Xc6-JY-Ahm" firstAttribute="leading" secondItem="6lC-5S-6ft" secondAttribute="trailing" constant="20" id="RLr-kr-sLg"/>
+                    <constraint firstItem="6lC-5S-6ft" firstAttribute="leading" secondItem="UKq-tb-k4H" secondAttribute="trailing" constant="15" id="Xv2-UR-FjD"/>
+                    <constraint firstItem="UKq-tb-k4H" firstAttribute="centerY" secondItem="Tmu-L7-6Am" secondAttribute="centerY" id="fgZ-ja-Um2"/>
+                    <constraint firstAttribute="trailing" secondItem="Xc6-JY-Ahm" secondAttribute="trailing" constant="10" id="kZm-Ed-Y6Q"/>
+                    <constraint firstItem="6lC-5S-6ft" firstAttribute="centerY" secondItem="UKq-tb-k4H" secondAttribute="centerY" id="sHi-IZ-UjH"/>
+                    <constraint firstItem="ro1-do-Dw7" firstAttribute="width" secondItem="Tmu-L7-6Am" secondAttribute="width" id="ziH-uQ-JCh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="PYA-2Z-stl"/>
+            <connections>
+                <outlet property="imgViewUser" destination="UKq-tb-k4H" id="iOt-Qa-LmD"/>
+                <outlet property="lblMessage" destination="6lC-5S-6ft" id="LV8-Wm-sdV"/>
+            </connections>
+            <point key="canvasLocation" x="-156" y="-31"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Developer" width="400" height="300"/>
+        <image name="NotificationReport" width="30" height="39"/>
+    </resources>
+</document>
